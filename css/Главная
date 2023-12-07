@@ -1,0 +1,369 @@
+body {
+	margin:0;
+	font-family: 'Playfair Display SC', serif;
+    text-decoration: none;
+
+
+	font-size: 15px;
+	line-height: 1.6;
+	color:#000000;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+/* container */
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin:0 auto;
+}
+
+/*header*/
+
+.header {
+	width: 100%;
+	padding-top: 30px;
+	padding-right: 30px;
+	padding-left: 100px;
+	position: absolute;/*располагается относительно своего ближайшего спозиционированного предка*/
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+
+}
+
+.header__inner {
+	display: flex;
+	justify-content: space-between;/*первый элемент вначале,последний в конце*/
+	align-items: center;
+}
+
+.header__logo {
+	font-size: 30px;
+	font-weight: 0;/*насыщенность*/
+	color: rgb(0, 0, 0);
+    font-family: 'Odor Mean Chey', serif;
+
+}
+
+/*nav*/
+
+.nav {
+	font-size: 14px;
+	text-transform:uppercase;
+    
+}
+
+.nav__link {
+	display: inline-block;/* будет заполнен окружающим содержимым, как если бы это был единый встроенный блок */
+	vertical-align: top;/* вертикальное выравнивание строчных элементов */
+	margin: 0 10px;
+	position: relative;/*относительно его исходного места*/
+
+	color:#000000;
+	text-decoration:none ;
+    font-weight: 500;
+
+	transition: color .2s linear;/*анимация*/
+
+}
+
+.nav__link::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 3px;
+
+	background-color:rgb(6, 70, 9) ;
+
+	opacity: 0; /*прозрачность*/
+
+	position: absolute;
+	top:100%;
+	left: 0;
+	z-index: 1;
+
+	transition: opacity .1s linear;
+
+}
+
+.nav__link:hover {
+	
+	color:rgb(0, 0, 0);
+}
+
+.nav__link:hover:after {
+	opacity: 1;
+}
+
+.cartinka {
+    /*вывод и визуальное отображение*/ /*гибкость элементов*/
+	width:  100%; /*ширина*/
+	height: 100%;	/*высота*/
+	flex-direction: column;/*позволяет указать направление*/ /*главная ось контейнера flex совпадает с осью блока*/
+	justify-content: center;/*Элементы располагаются вплотную друг к другу по направлению к центру контейнера выравнивания вдоль главной оси.*/
+	-webkit-background-size: cover;/*позволяет указывать размеры фонового изображения*/ /* масштабирует картинку с сохранением пропорций по меньшей стороне*/
+	background-size: cover;/*размер фона*/ /*масштабирует изображение как можно больше */
+	
+    opacity: 0.2;
+    margin-top: 80px;    
+}
+
+.intro{
+    display: inline-block;
+}
+
+.intro__inner {
+	width: 100%;
+	min-width: 880px;
+	margin: 0 auto;
+	text-align: right;
+    font-style: normal;
+    font-weight: 400;   
+	
+}
+
+.intro__suptitle {	
+    display: inline-block;  
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 133.333% */
+    letter-spacing: 5px;
+    position: absolute;
+    justify-content:right;
+    margin-top: 250px;
+    
+}
+
+.vstuplenie{
+    display: inline;
+    
+}
+
+.nachalo{
+    color: #000;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 100% */
+    letter-spacing: 5px;
+    margin-top:900px;
+}
+
+.img{
+    display: flex;
+    justify-content:space-around;
+    margin-top: 160px;
+    
+}
+
+.inf{
+    display: flex;
+    justify-content:space-around;
+    color: #000;
+    text-align: center;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 133.333% */
+    letter-spacing: 1.5px;
+}
+
+.txt{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 100% */
+    letter-spacing: 5px;
+    text-align: center;
+    margin-top: 150px;
+}
+
+.icons{
+    display: flex;
+    justify-content:space-between;
+    margin-top:130px;
+}
+
+.iconstxt1{
+font-size: 26px;
+font-style: normal;
+font-weight: 400;
+line-height: 40px; /* 153.846% */
+letter-spacing: 5px;
+margin-left: 180px;
+
+}
+
+.iconstxt2{
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 153.846% */
+    letter-spacing: 5px;
+    margin-left: 850px;
+    margin-top: -134px;
+}
+
+.iconstxt3{
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 153.846% */
+    letter-spacing: 5px;
+    margin-left: 1500px;
+    margin-top: -134px;
+}
+
+.welcome{
+    text-align: right;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 80% */
+    letter-spacing: 5px;
+    text-align: center;
+    margin-top:160px;
+
+}
+
+
+.text{ 
+    text-align: right;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 133.333% */
+    letter-spacing: 5px;
+    margin-top: 30px;
+    
+}
+
+
+.border{
+    border: 1px solid #2E581A;
+    height:1000px ;
+    padding-top: 70px;
+    padding-bottom:0px;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 70px;
+    
+
+    background: rgba(217, 217, 217, 0.00);
+     
+}
+
+.text2{
+    text-align: right;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 133.333% */
+    letter-spacing: 5px;
+    margin-top:-250px;
+    margin-right: 40px;
+    color: black;
+}
+
+footer{
+    padding: 0;
+    margin-top: 200px;
+    text-decoration: none;
+    color: white;
+    background: #2E581A;
+    
+}
+
+a:hover{
+    text-decoration: underline;
+}
+.footerinfo{
+    display: inline-block;
+    margin-left: 1%;    
+}
+
+.text1{
+    font-size: 25px;
+    margin-bottom: 1px;
+    
+}
+.footerlinks a{
+    font-size: 17px;
+    padding: 1.8% 0;
+    list-style: none;
+    margin-left: 19px;
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 80px;
+    letter-spacing: 5px;
+}
+.footerlinks{
+    margin: 5%;
+    margin-bottom: 0;
+    
+}
+
+.footerinfos{
+    display: inline-block;
+    margin-left: 1%;
+  
+    
+}
+
+.text2f{
+    color: #FFF;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 80px; /* 133.333% */
+    letter-spacing: 5px;
+    font-size: 25px;
+    margin-bottom: 1px;
+    text-align: left;
+}
+.footer2{
+    margin: 0%;
+    margin-bottom: 0;
+    
+
+}
+.footer2 li{
+    line-height: 33px;
+    font-size: 17px;
+    padding: 0.8% 0% ;
+    list-style: none;
+    margin-left: 1px;
+    letter-spacing:8px;
+}
+
+.txtflower{
+    display: inline-block;
+    margin-left: 300px; 
+
+}
+
+.fl{
+    text-align: right;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: 1px; /* 100% */
+    letter-spacing: 1px;
+}
